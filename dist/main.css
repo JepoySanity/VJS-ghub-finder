@@ -557,6 +557,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 83.333333%;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -780,5 +784,31 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-5\/6 {
     width: 83.333333%;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-3\/4 {
+    width: 75%;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
+  .lg\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .lg\:w-3\/5 {
+    width: 60%;
   }
 }
