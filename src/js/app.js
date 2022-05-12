@@ -12,6 +12,7 @@ searchForm.addEventListener("submit", (e) => {
         ui.showNotFound();
       } else {
         ui.showProfile(data.profile);
+        searchText.value = "";
       }
     });
   }

@@ -30,22 +30,22 @@ class UI {
           <button
             class="bg-gradient-to-r from-blue-900 to-blue-600 p-1 rounded-md text-sm w-1/5"
           >
-            Repos (0)
+            Repos (${user.public_repos})
           </button>
           <button
             class="bg-gradient-to-r from-yellow-900 to-yellow-600 p-1 rounded-md text-sm w-1/5"
           >
-            Gists (0)
+            Gists (${user.public_gists})
           </button>
           <button
             class="bg-gradient-to-r from-red-900 to-red-600 p-1 rounded-md text-sm w-1/5"
           >
-            Followers (0)
+            Followers (${user.followers})
           </button>
           <button
             class="bg-gradient-to-r from-green-900 to-green-600 p-1 rounded-md text-sm w-1/5"
           >
-            Following (0)
+            Following (${user.following})
           </button>
         </div>
         <h1 class="text-[2rem] font-bold mt-4">${user.name}</h1>
