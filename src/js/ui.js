@@ -62,4 +62,16 @@ class UI {
   </div>
     `;
   }
+  showNotFound() {
+    this.profileSection.innerHTML = `
+    <div
+    class="container mx-auto w-5/6 md:5/6 2xl:w-1/2 bg-slate-800 mt-4 text-white rounded-lg p-4"
+    >
+    <div class="flex flex-none sm:flex-row justify-center">
+      <div class="flex flex-col">
+        <h1>User not found</h1>
+      </div>
+    </div>
+    `;
+  }
 }
