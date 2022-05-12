@@ -1,4 +1,5 @@
 const githubAPI = new GitHubAPI();
+const ui = new UI();
 
 const searchForm = document.getElementById("search_form");
 const searchText = document.getElementById("search_text");
@@ -10,7 +11,7 @@ searchForm.addEventListener("submit", (e) => {
       if (data.profile.message === "Not Found") {
         alert("Not Found");
       } else {
-        alert(`${data.profile.name}`);
+        ui.showProfile(data.profile);
       }
     });
   }
