@@ -16,7 +16,7 @@ class UI {
           class="rounded-t-md w-[200px] h-[200px]"
         />
         <a
-          class="bg-slate-600 mt-2 rounded-b-md p-2 hover:bg-slate-900 w-[200px]"
+          class="bg-slate-600 mt-4 rounded-b-md p-2 hover:bg-slate-900 w-[200px]"
           type="button"
           href="${user.html_url}"
           target="_blank"
@@ -51,11 +51,16 @@ class UI {
         <h1 class="text-[2rem] font-bold mt-4">${user.name}</h1>
         <h1 class="text-lg text-slate-500">${user.bio}</h1>
         <div class="mt-4">
-          <h1 class="text-sm py-2 text-white">Company: ${user.company}</h1>
-          <h1 class="text-sm py-2 text-white">Website: 
-            <a href="${user.blog}" target="_blank">${user.blog}
+          <h1 class="text-sm py-2 text-white">Company: 
+          ${user.company === null ? "not specified" : user.company}
           </h1>
-          <h1 class="text-sm py-2 text-white">Member Since: ${user.created_at}</h1>
+          <h1 class="text-sm py-2 text-white">Website: 
+            <a href="${user.blog}" target="_blank">
+            ${user.blog ? user.blog : "not specified"}
+          </h1>
+          <h1 class="text-sm py-2 text-white">Member Since: 
+          ${user.created_at}
+          </h1>
         </div>
       </div>
     </div>
