@@ -1,6 +1,7 @@
 class UI {
   constructor() {
     this.profileSection = document.getElementById("profile");
+    this.repoSection = document.getElementById("repos");
   }
 
   showProfile(user) {
@@ -65,8 +66,43 @@ class UI {
       </div>
     </div>
   </div>
+  <div
+    class="container mx-auto w-5/6 md:5/6 2xl:w-1/2 flex-row rounded-b-lg bg-slate-800 mt-2 p-4 space-y-5"
+  >
+  <h1 class="text-xl text-white font-bold">Latest Repos</h1>
+  </div>
     `;
   }
+
+  showRepos(repos) {
+    let output = "";
+    repos.forEach((repo) => {
+      output += `
+      <div class="flex flex-row bg-slate-600 rounded-md p-4 justify-between">
+        <h1 class="text-xl text-white font-bold">${repo.name}</h1>
+        <div class="flex flex-row space-x-4 text-white">
+          <button
+            class="bg-gradient-to-r from-blue-900 to-blue-600 p-1 rounded-md text-sm w-[100px]"
+          >
+            Stars (${repo.stargazers_count})
+          </button>
+          <button
+            class="bg-gradient-to-r from-green-900 to-green-600 p-1 rounded-md text-sm w-[100px]"
+          >
+            Watchers (${repo.watchers_count})
+          </button>
+          <button
+            class="bg-gradient-to-r from-yellow-900 to-yellow-600 p-1 rounded-md text-sm w-[100px]"
+          >
+            Forks (${repo.forks_count})
+          </button>
+        </div>
+      </div>
+      `;
+    });
+    this.repoSection.innerHTML = output;
+  }
+
   showNotFound(message) {
     this.profileSection.innerHTML = `
     <div
