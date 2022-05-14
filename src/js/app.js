@@ -5,6 +5,7 @@ const searchForm = document.getElementById("search_form");
 const searchText = document.getElementById("search_text");
 
 searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
   const searchKey = searchText.value;
   if (searchKey != "") {
     githubAPI.getUser(searchKey).then((data) => {
