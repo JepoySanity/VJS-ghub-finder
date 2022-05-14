@@ -13,6 +13,7 @@ searchForm.addEventListener("submit", (e) => {
         ui.showNotFound("User not found.");
       } else {
         ui.showProfile(data.profile);
+        ui.showRepos(data.repos);
         searchText.value = "";
       }
     });
