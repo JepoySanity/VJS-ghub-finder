@@ -10,7 +10,7 @@ searchForm.addEventListener("submit", (e) => {
   if (searchKey != "") {
     githubAPI.getUser(searchKey).then((data) => {
       if (data.profile.message === "Not Found") {
-        ui.showNotFound();
+        ui.showNotFound("User not found.");
       } else {
         ui.showProfile(data.profile);
         searchText.value = "";
